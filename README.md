@@ -24,12 +24,7 @@ The project simulates a Chess game, supporting all chess pieces (Pawn, Rook, Kni
 - Free Play mode allowing users to explore legal moves and move pieces.
 - Modular design that separates game logic from the user interface.
 
-## Game Modes
+## Upcoming Features
 
-Currently, the game supports the following modes:
-
-- **Free Play Mode**: A casual mode where you can move pieces freely. You can view the legal moves for any piece, make your own moves, and explore the board without any constraints or formal game rules. This mode is ideal for learning the game or just experimenting with piece movements.
-
-**Upcoming Features**:
 - **1v1 Multiplayer Mode**: Play against another player locally or over a network.
 - **AI Mode**: Play against an AI opponent with varying difficulty levels.
