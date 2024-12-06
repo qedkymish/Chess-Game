@@ -1,17 +1,5 @@
 # Chess Game
 
-**Developer**: Qusay Edkymish  
-**Version**: 0.1.0  
-**Date**: Dec/1st/2024
-
-## Table of Contents
-
-1. [Project Description](#project-description)
-2. [Features](#features)
-3. [Upcoming Features](#upcoming-features)
-
-## Project Description
-
 This is a simple text-based **Chess game** developed as part of the CSIS-297 Intermediate C++ Programming course at **Grossmont College**. The game implements object-oriented programming principles including inheritance, polymorphism, and encapsulation.
 
 The project simulates a Chess game, supporting all chess pieces (Pawn, Rook, Knight, Bishop, Queen, King) with basic movement and legal move calculation. The game offers a **Free Play mode** for interactive piece movement and visual representation of the board.
