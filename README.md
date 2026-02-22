@@ -22,7 +22,7 @@ The game runs in the terminal and supports interactive move exploration in Free 
 - Modular class design separating board logic and game flow
 - Clear text-based board visualization
 
-## Upcoming Features
+## Roadmap
 
 - **1v1 Multiplayer Mode**: Play against another player locally or over a network.
 - **AI Mode**: Play against an AI opponent with varying difficulty levels.
