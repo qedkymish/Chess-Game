@@ -26,3 +26,9 @@ The game runs in the terminal and supports interactive move exploration in Free 
 
 - **1v1 Multiplayer Mode**: Play against another player locally or over a network.
 - **AI Mode**: Play against an AI opponent with varying difficulty levels.
+
+## Build & Run
+
+```bash
+g++ -std=c++17 -Iinclude src/*.cpp -o chess
+./chess
