@@ -51,6 +51,22 @@ void ChessBoard::initializeBoard()
     {
         board[6][j] = make_unique<Pawn>("White", Position(6, j));
     }
+
+    //Place black pieces (top side)
+    board[0][0] = make_unique<Rook>("Black", Position(0, 0));
+    board[0][1] = make_unique<Knight>("Black", Position(0, 1));
+    board[0][2] = make_unique<Bishop>("Black", Position(0, 2));
+    board[0][3] = make_unique<Queen>("Black", Position(0, 3));
+    board[0][4] = make_unique<King>("Black", Position(0, 4));
+    board[0][5] = make_unique<Bishop>("Black", Position(0, 5));
+    board[0][6] = make_unique<Knight>("Black", Position(0, 6));
+    board[0][7] = make_unique<Rook>("Black", Position(0, 7));
+
+    //Place black pawns
+    for (int j = 0; j < SIZE; j++)
+    {
+        board[1][j] = make_unique<Pawn>("Black", Position(1, j));
+    }
 }
 
 /**
@@ -69,18 +85,23 @@ void ChessBoard::displayBoard(const vector<Position>& highlightedPositions) cons
         cout << setw(3) << c; // Column headers (A-H)
     }
     cout << endl;
-
     for (int i = 0; i < SIZE; i++) {
         cout << setw(2) << (i + 1) << " "; // Row numbers (1-8)
         for (int j = 0; j < SIZE; j++) {
             Position currentPos(i, j);
-
             // Check if the current position is in the list of highlighted positions
             if (find(highlightedPositions.begin(), highlightedPositions.end(), currentPos) != highlightedPositions.end()) {
                 cout << setw(3) << "x"; // Highlight position
             }
             else if (board[i][j]) {
-                cout << setw(3) << board[i][j]->getSymbol(); // Display piece symbol
+                char symbol = board[i][j]->getSymbol();
+
+                // Black renders lowercase so the two sides are distinguishable
+                if (board[i][j]->getColor() == "Black") {
+                    symbol = static_cast<char>(tolower(static_cast<unsigned char>(symbol)));
+                }
+
+                cout << setw(3) << symbol; // Display piece symbol
             }
             else {
                 cout << setw(3) << "."; // Empty space
