@@ -5,6 +5,8 @@
 
 #include "ChessBoard.h"
 #include "ChessPiece.h"
+#include <algorithm>   // std::find
+#include <cctype>      // tolower
 
 
 /**
