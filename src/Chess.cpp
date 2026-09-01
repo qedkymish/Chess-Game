@@ -3,6 +3,8 @@
 //Chess Class Implementation
 
 #include "Chess.h"
+#include <limits>      // numeric_limits, used by cin.ignore
+#include <algorithm>   // std::find
 
 /**
  * @brief Constructor for the Chess class.
